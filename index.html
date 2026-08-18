@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — Her Closing Academy — Ava Mistruzzi</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--panel:#f8fafc;--bg:#eef0f3;
+ --accent:#4f46e5;--good:#059669;--warn:#ea580c;--bad:#9f1239}
+@media(prefers-color-scheme:dark){:root{--ink:#e8eaed;--muted:#9aa3b2;--line:#2a3140;
+ --panel:#151a23;--bg:#0d1117;--accent:#818cf8}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+ -webkit-font-smoothing:antialiased;line-height:1.55}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.top{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topin{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:60px}
+.brand{font-size:15px;font-weight:600;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:400}
+nav.main{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap;
+ padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{color:var(--ink)}
+nav.main a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.hero{padding:48px 0 26px}
+.kick{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.hero h1{font-size:40px;margin-bottom:14px;line-height:1.15}
+.hero p{font-size:17px;color:var(--muted);max-width:820px}
+section{padding:26px 0}
+h2.sec{font-size:22px;margin-bottom:16px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{font-size:15px;margin-bottom:7px}
+.card p{font-size:14px;color:var(--muted)}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat .n{font-size:26px;font-weight:600;letter-spacing:-.03em}
+.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;
+ border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.good{color:var(--good);border-color:var(--good)}
+.tag.warn{color:var(--warn);border-color:var(--warn)}
+.tag.bad{color:var(--bad);border-color:var(--bad)}
+figure{background:var(--panel);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+figure img{width:100%;display:block;background:#000;cursor:zoom-in}
+figcaption{padding:8px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+figcaption b{color:var(--ink);font-weight:600}
+details{background:var(--panel);border:1px solid var(--line);border-radius:9px;margin-bottom:9px}
+summary{padding:12px 15px;cursor:pointer;font-size:14px;font-weight:500;list-style:none;
+ display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .meta{font-size:12px;color:var(--muted);font-weight:400;white-space:nowrap}
+details .body{padding:0 15px 15px;font-size:14.5px;line-height:1.72;color:var(--ink)}
+details .body p{margin-bottom:12px}
+.ts{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;font-size:12.5px}
+.searchbar{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:9px;
+ background:var(--panel);color:var(--ink);font-size:14.5px;margin-bottom:14px;font-family:inherit}
+.note{border-left:3px solid var(--accent);padding:11px 15px;background:var(--panel);
+ border-radius:0 9px 9px 0;font-size:14px;margin-bottom:13px}
+.note.warn{border-left-color:var(--warn)}
+footer{padding:36px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:34px}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.93);display:none;align-items:center;
+ justify-content:center;z-index:99;cursor:zoom-out;padding:20px}
+#lb img{max-width:100%;max-height:92vh;object-fit:contain}
+#lb .cap{position:fixed;bottom:14px;left:0;right:0;text-align:center;color:#cbd5e1;font-size:13px;padding:0 20px}
+</style></head><body>
+<header class="top"><div class="topin">
+<div class="brand">Ava Mistruzzi <span>swipe</span></div>
+<nav class="main"><a href="index.html" class="on">Overview</a><a href="board.html" class="">The board</a><a href="analysis.html" class="">Analysis</a><a href="slides.html" class="">Masterclass slides</a><a href="decks.html" class="">Decks</a><a href="transcripts.html" class="">Transcripts</a><a href="videos.html" class="">Video library</a><a href="pages.html" class="">Funnel pages</a><a href="copybank.html" class="">Copy bank</a></nav></div></header>
+<div class="wrap">
+<div class="hero"><div class="kick">Competitor swipe · captured 2 &amp; 6 August 2026</div>
+<h1>Her Closing Academy — Ava Mistruzzi</h1><p>Remote high-ticket <i>closing</i> sold to women &mdash; the closest ICP match to UGC World in this file, with the product swapped: she sells getting <b>placed on someone else&rsquo;s offer</b>, we sell creating content. Two funnels off one site. The three things worth stealing are the <b>Fast Pass</b> show-rate mechanic, a bonus stack that pays for a <b>booking</b> rather than a sale, and a deliberate on-mic refusal to state the price.</p></div>
+<section><div class="grid g4"><div class="stat"><div class="n">Women, 9–5 escape</div><div class="l">ICP</div></div><div class="stat"><div class="n">$10K–$30K/mo, 90 days</div><div class="l">Promise</div></div><div class="stat"><div class="n">2 (VSL + webinar)</div><div class="l">Funnels live</div></div><div class="stat"><div class="n">2h 14m 19s</div><div class="l">Masterclass</div></div><div class="stat"><div class="n">20,213</div><div class="l">Words transcribed</div></div><div class="stat"><div class="n">78</div><div class="l">Deck slides</div></div><div class="stat"><div class="n">$9,979</div><div class="l">Bonus stack</div></div><div class="stat"><div class="n">never stated</div><div class="l">Price</div></div></div></section>
+<section><h2 class="sec">The offer</h2><div class="tablewrap"><table><tr><th>Product</th><td>Her Closing Academy — remote high-ticket closing training + placement, for women</td></tr><tr><th>Mechanism named</th><td>&ldquo;Soft selling to build a soft life&rdquo;</td></tr><tr><th>Hook (webinar)</th><td>&ldquo;Learn How Women Are Choosing a <i>Soft Life</i> And Becoming Financially Free in 90 Days With Remote Sales&rdquo;</td></tr><tr><th>Hook (replay)</th><td>&ldquo;The Fastest Way Women Are Making $10K&ndash;$30K/Month Without a Degree, Boss, or Office&rdquo;</td></tr><tr><th>Objection stripped on a slide</th><td>not manipulation &middot; not pushy &middot; not a 9&ndash;5 grind &middot; not capped &middot; not just for extroverts &middot; not cold calling &middot; <b>not MLM</b> &middot; not burnout</td></tr><tr><th>Opt-in (webinar)</th><td>Name, email, country, <b>phone required</b> — modal, posts to a Zapier catch hook</td></tr><tr><th>Delivery</th><td>12-week accelerator &rarr; 20&ndash;30 mock calls &rarr; placement at week 8 &rarr; job portal (200+ roles listed in one week)</td></tr><tr><th>Path</th><td>IG bio &rarr; /w &rarr; WebinarJam &rarr; /wc &rarr; live class &rarr; /replay &rarr; /application &rarr; Calendly</td></tr><tr><th>Price</th><td><b>Never stated.</b> Not on a page, not on any of 227 extracted frames, not in 20,213 transcribed words. Refused on-mic at 1:47:18</td></tr><tr><th>Proof</th><td>Six full YouTube case studies on the confirmation page, 12&ndash;26 min each. <b>Zero proof on the registration page.</b></td></tr></table></div></section>
+<section><h2 class="sec">What matters</h2><div class="grid g2"><div class="card"><h3>The Fast Pass — the cheapest show-rate mechanic in the file</h3><p>The confirmation video promises a free &ldquo;Sales Career Fast Pass&rdquo; guide gated behind three conditions: <b>reply to the email</b> with the words &ldquo;I will be at the event&rdquo;, <b>show up on time on a laptop</b>, and <b>stay to the end</b> — &ldquo;that is how the fast pass activates and it gets sent to you right after.&rdquo; One PDF buys a reply (which is also a deliverability signal), a micro-commitment, an on-time attendance and a stay-to-the-end. Cost to her: zero.</p></div><div class="card"><h3>The bonus stack pays for a booking, not a sale</h3><p>At 09:14 she promises <b>$5,000</b> in bonuses for staying to the end. At 1:20:35 it becomes <b>$10,000</b> — and the condition quietly changes from <i>stay</i> to <b>book today</b>. The slide totals seven bonuses at <b>$9,979</b> and says &ldquo;yours free when you book today.&rdquo; Every bonus dollar is spent buying a calendar slot.</p></div><div class="card"><h3>She refuses the price on purpose, out loud, and frames the refusal as service</h3><p>Asked directly in the Q&amp;A at 1:47:18: <i>&ldquo;we really have investment ranges that fit anyone&rsquo;s budget… I would be doing you a huge disservice if we just had a checkout link right on here, because it&rsquo;s not like that, it has to be customized and personalized to you.&rdquo;</i> Same play as 1 Percent Academy. Two competitors, same market shape, both hand the number to a human on the phone.</p></div><div class="card"><h3>Proof is withheld from the registration page and dumped after the opt-in</h3><p>The reg page has no testimonial, no logo, no number — just a countdown and a seat bar. The confirmation page then carries six full case-study interviews, 12&ndash;26 minutes each. Two of the six were published the day before capture, so the proof block is maintained continuously. The bet: proof does not buy the opt-in, it buys the attendance.</p></div><div class="card"><h3>The whole class is a typed-commitment machine</h3><p>Chat prompts are built into the deck roughly every ten minutes — <i>type &ldquo;I RELATE&rdquo;</i>, <i>&ldquo;I AM BREAKING FREE TODAY&rdquo;</i>, <i>&ldquo;I AM CLAIMING MY SOFT LIFE NOW&rdquo;</i> — and at the close <b>&ldquo;Let&rsquo;s congratulate the ladies who have booked tonight! Type &lsquo;I&rsquo;M IN&rsquo; in the chat&rdquo;</b>, which converts other people&rsquo;s bookings into live social proof.</p></div><div class="card"><h3>The DIY teardown is the offer</h3><p>One slide does the maths on doing it alone: 10 DMs a day, 2% reply, 50 companies needed to land one role, therefore <b>2,500 DMs and 12,500 minutes of unpaid work</b>. The placement portal is then screen-shared with 200+ live roles at $6K&ndash;$20K/mo on-target. The arithmetic <i>is</i> the pitch.</p></div><div class="card"><h3>The pre-call gate on the older VSL funnel — still the best single idea here</h3><p>F047 serves <b>&ldquo;Your Call Is Booked, But Not Yet Confirmed&rdquo;</b> after booking, telling the lead to watch a video <b>&ldquo;to make sure we don&rsquo;t cancel your call&rdquo;</b>, with the next step <b>locked for 2:00</b>. Commitment declared unfinished, loss framed on something just gained, and the video cannot be skipped.</p></div><div class="card"><h3>Scarcity is asserted three different ways and never reconciled</h3><p>&ldquo;I have <b>18 spots</b> and you only have the next 30 minutes&rdquo; (1:26:26). Twenty minutes later, &ldquo;my tech guy just messaged me, we only have <b>two spots left</b>&rdquo; (2:01:57). Then &ldquo;we have <b>113 women</b> left, half of our ladies are gone&rdquo; (2:06:53). Spot count, timer and room count all move independently.</p></div><div class="card"><h3>Build hygiene is poor — read this before copying anything</h3><p>The replay page still runs a dead script watching for an <b>iClosed</b> iframe and redirecting to <code>flipland.info/pc</code> or <code>/dq497</code>, with the embed URL <code>app.iclosed.io/e/mentorme/land-flipping-strategy-call</code> — a land-flipping funnel&rsquo;s booking widget left inside the template. The replay headline links to <code>preview--forged-site-analytics.lovable.app</code>. Her Calendly slug is literally <code>…-clone-2</code>. The funnel converts anyway, which is the actual lesson.</p></div></div></section>
+<section><h2 class="sec">Funnel path</h2><div class="tablewrap"><table>
+<tr><th>#</th><th>Step</th><th>URL</th><th>Note</th></tr><tr><td><b>1</b></td><td>F121 · Registration</td><td><code>learn.herclosingacademy.com/w?el=ig-bio</code></td><td><span class="tag good">the entry</span> From her Instagram bio. Countdown, &ldquo;LIMITED SPOTS AVAILABLE&rdquo; seat bar, two identical CTAs, zero proof. The <code>?el=</code> parameter is a Hyros source label, not a UTM.</td></tr><tr><td><b>2</b></td><td>F121 · Registration variant B</td><td><code>learn.herclosingacademy.com/w2</code></td><td>Same promise on a second slug. Countdown reads 00:00:00, so it is parked.</td></tr><tr><td><b>3</b></td><td>F121 · Opt-in modal</td><td><code>(modal on /w)</code></td><td><span class="tag bad">phone required</span> Name, email, country, phone. Posts to <code>hooks.zapier.com/hooks/catch/21266060/4olnuab/</code>, fires the Meta pixel itself, then redirects to /wc. She owns the lead in Zapier before WebinarJam sees it.</td></tr><tr><td><b>4</b></td><td>F121 · Confirmation</td><td><code>learn.herclosingacademy.com/wc</code></td><td><span class="tag good">the Fast Pass</span> 2m59s indoctrination video, add-to-calendar shown as a screenshot of the real WebinarJam mail, then six full YouTube case studies.</td></tr><tr><td><b>5</b></td><td>F121 · The class</td><td><code>event.webinarjam.com</code></td><td>Thursday 8:00PM EST. Mail from ops@herclosingacademy via em.webinarjam.net. The confirmation screenshot she posts is dated March 19 2026 — same asset, rolling dates.</td></tr><tr><td><b>6</b></td><td>F121 · Replay</td><td><code>learn.herclosingacademy.com/replay</code></td><td><span class="tag good">ungated</span> No password, no email wall, no expiry. The full 2h14m pitch, served to anyone with the URL.</td></tr><tr><td><b>7</b></td><td>F121 · Application</td><td><code>learn.herclosingacademy.com/application</code></td><td>&ldquo;Your Application Is Approved!&rdquo; — with no application on the page, just an inline Calendly (<code>close-her-academy/her-closing-academy-clone-2</code>). Approval is asserted, never earned. Hyros fires <code>tag=!application</code>.</td></tr><tr><td><b>8</b></td><td>F047 · Opt-in</td><td><code>learn.herclosingacademy.com/u3</code></td><td><span class="tag bad">resisted automation</span> Four fields. Captured, not registered.</td></tr><tr><td><b>9</b></td><td>F047 · Free training</td><td><code>learn.herclosingacademy.com/ft3</code></td><td>The training page behind the opt-in.</td></tr><tr><td><b>10</b></td><td>F047 · Pre-call gate</td><td><code>learn.herclosingacademy.com/pc</code></td><td><span class="tag good">the mechanic</span> &ldquo;Booked, but not yet confirmed&rdquo; &middot; threat to cancel &middot; next step locked 2:00.</td></tr></table></div></section>
+<footer>Captured 2 &amp; 6 August 2026. Evidence in <code>~/UNDERGROUND_FUNNELS_SSOT</code>
+and <code>~/Downloads/AVA_MISTRUZZI_Swipe</code>. Built with the <code>/swipe</code> skill.<br>
+Competitor research. Not for redistribution.</footer></div>
+<div id="lb"><img alt=""><div class="cap"></div></div>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='IMG'&&e.target.closest('figure')){
+    var lb=document.getElementById('lb');
+    lb.querySelector('img').src=e.target.dataset.full||e.target.src;
+    var fc=e.target.closest('figure').querySelector('figcaption');
+    lb.querySelector('.cap').textContent=fc?fc.textContent.trim():'';
+    lb.style.display='flex';
+  } else if(e.target.closest('#lb')){document.getElementById('lb').style.display='none';}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')document.getElementById('lb').style.display='none';
+});
+function wireSearch(id,sel){
+  var b=document.getElementById(id); if(!b)return;
+  b.addEventListener('input',function(){
+    var q=b.value.toLowerCase();
+    document.querySelectorAll(sel).forEach(function(el){
+      el.style.display = !q || el.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  });
+}
+wireSearch('tsearch','details.tr');
+wireSearch('ssearch','figure.sl');
+</script></body></html>
